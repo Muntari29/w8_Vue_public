@@ -9,4 +9,4 @@
     targetPort = 8079
     port = 8080
     publish = "dist"
-    autoLaunch = true 
+    autoLaunch = false 
