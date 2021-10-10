@@ -13,16 +13,6 @@
   </header>
 </template>
 
-<script>
-export default {
-  data(){
-    return {
-      headerTitle: 'TLTILTITLTITL'
-    }
-  }
-}
-</script>
-
 <style lang="scss" scoped>
 .header--wrapper{
     width: 100%;
