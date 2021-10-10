@@ -1,7 +1,6 @@
 <template>
   <div class="page-nation">
     <ul class="page">
-      {{ totalResults }}
       <li>
         <router-link to="/">
           &lt;
