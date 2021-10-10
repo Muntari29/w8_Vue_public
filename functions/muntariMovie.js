@@ -4,16 +4,17 @@ const { API_END_POINT, API_KEY } = process.env
 
 exports.handler = async function (event) {
     const options = JSON.parse(event.body)
-    const { movieId, title, page=1 } =options
+    const { movieId, title, page=1, body } =options
     
     if (title && !movieId){
         console.log('title!!!')
         const { data } = await axios({
             url: `${API_END_POINT}?apikey=${API_KEY}&s=${title}&page=${page}`,
-            method: 'GET',
+            method: 'POST',
             headers:{
                 'Content-Type': 'application/json'
-            }
+            },
+            data: body
         })
         return {
             statusCode: 200,
@@ -24,10 +25,11 @@ exports.handler = async function (event) {
         console.log('movie!!!!')
         const { data } = await axios({
             url: `${API_END_POINT}?apikey=${API_KEY}&i=${movieId}&plot=full`,
-            method: 'GET',
+            method: 'POST',
             headers:{
                 'Content-Type': 'application/json'
-            }
+            },
+            data: body
         })
         return {
             statusCode: 200,
