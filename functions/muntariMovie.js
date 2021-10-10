@@ -7,7 +7,6 @@ exports.handler = async function (event) {
     const { movieId, title, page=1 } =options
     
     if (title && !movieId){
-        console.log('title!!!')
         const { data } = await axios({
             url: `${API_END_POINT}?apikey=${API_KEY}&s=${title}&page=${page}`,
             method: 'GET'
@@ -18,7 +17,6 @@ exports.handler = async function (event) {
         }
     }
     if (!title && movieId){
-        console.log('movie!!!!')
         const { data } = await axios({
             url: `${API_END_POINT}?apikey=${API_KEY}&i=${movieId}&plot=full`,
             method: 'GET'
