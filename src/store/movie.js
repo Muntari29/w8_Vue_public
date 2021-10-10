@@ -43,17 +43,22 @@ export default {
 }
 
 async function _request(options){
-    const { movieId, title, page=1 } = options
-    const API_KEY = '7035c60c'
-    if (title && !movieId){
-        return await fetch(`https://www.omdbapi.com?apikey=${API_KEY}&s=${title}&page=${page}`,{
-                method: 'GET',
-        }).then(res => res.json())
-    }
-    if (!title && movieId){
-        return await fetch(`https://www.omdbapi.com?apikey=${API_KEY}&i=${movieId}&plot=full`,{
-                method: 'GET',
-        }).then(res => res.json())
-    }
+    return await fetch('/.netlify/functions/muntariMovie',{
+        method: 'POST',
+        body: JSON.stringify(options)
+    }).then(res => res.json())
+    
+    // const { movieId, title, page=1 } = options
+    // const API_KEY = '7035c60c'
+    // if (title && !movieId){
+    //     return await fetch(`https://www.omdbapi.com?apikey=${API_KEY}&s=${title}&page=${page}`,{
+    //             method: 'GET',
+    //     }).then(res => res.json())
+    // }
+    // if (!title && movieId){
+    //     return await fetch(`https://www.omdbapi.com?apikey=${API_KEY}&i=${movieId}&plot=full`,{
+    //             method: 'GET',
+    //     }).then(res => res.json())
+    // }
 
 }
