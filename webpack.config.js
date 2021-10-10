@@ -33,14 +33,14 @@ module.exports = {
             loader: 'sass-loader',
             options:{
               additionalData: `
-              @use 'sass:color';
-              @use 'sass:list';
-              @use 'sass:map';
-              @use 'sass:math';
-              @use 'sass:meta';
-              @use 'sass:selector';
-              @use 'sass:string';
-              @import '~/scss/_variables';
+              @use "sass:color";
+              @use "sass:list";
+              @use "sass:map";
+              @use "sass:math";
+              @use "sass:meta";
+              @use "sass:selector";
+              @use "sass:string";
+              @import "~/scss/_variables";
               `
             }
           }], 
