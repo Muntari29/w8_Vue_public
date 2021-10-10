@@ -33,7 +33,9 @@ export default {
         async detailMovie({ commit }, payload){
             // loading 때 사용해보자. 여기다 commit('ToggleModal') 작성하면 현재 단계에서는 최초에 
             // 포스터에 대한 정보가 없어 에러가 발생함
+            console.log('1111111111')
             const data = await _request(payload)
+            console.log(1111, data)
             commit('ResizingImg', data)
             const selectedMovie = { selectedMovie: {...data}}
             commit('assignState', selectedMovie)
@@ -47,18 +49,4 @@ async function _request(options){
         method: 'POST',
         body: JSON.stringify(options)
     }).then(res => res.json())
-    
-    // const { movieId, title, page=1 } = options
-    // const API_KEY = '7035c60c'
-    // if (title && !movieId){
-    //     return await fetch(`https://www.omdbapi.com?apikey=${API_KEY}&s=${title}&page=${page}`,{
-    //             method: 'GET',
-    //     }).then(res => res.json())
-    // }
-    // if (!title && movieId){
-    //     return await fetch(`https://www.omdbapi.com?apikey=${API_KEY}&i=${movieId}&plot=full`,{
-    //             method: 'GET',
-    //     }).then(res => res.json())
-    // }
-
 }

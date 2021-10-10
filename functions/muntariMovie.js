@@ -12,7 +12,6 @@ exports.handler = async function (event) {
             url: `${API_END_POINT}?apikey=${API_KEY}&s=${title}&page=${page}`,
             method: 'GET'
         })
-        console.log(data)
         return {
             statusCode: 200,
             body: JSON.stringify(data)
@@ -24,7 +23,6 @@ exports.handler = async function (event) {
             url: `${API_END_POINT}?apikey=${API_KEY}&i=${movieId}&plot=full`,
             method: 'GET'
         })
-        console.log(data)
         return {
             statusCode: 200,
             body: JSON.stringify(data)
