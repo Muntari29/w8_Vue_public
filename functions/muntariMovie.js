@@ -11,9 +11,6 @@ exports.handler = async function (event) {
         const { data } = await axios({
             url: `${API_END_POINT}?apikey=${API_KEY}&s=${title}&page=${page}`,
             method,
-            headers:{
-                'Content-Type': 'application/json'
-            },
             data: body
         })
         return {
@@ -26,9 +23,6 @@ exports.handler = async function (event) {
         const { data } = await axios({
             url: `${API_END_POINT}?apikey=${API_KEY}&i=${movieId}&plot=full`,
             method,
-            headers:{
-                'Content-Type': 'application/json'
-            },
             data: body
         })
         return {
