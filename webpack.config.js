@@ -63,3 +63,4 @@ module.exports = {
       historyApiFallback: true
     }
   }
+  

@@ -22,8 +22,5 @@ export default {
 .main {
   background-color: gray;
   height: 100%;
-  .main--inner{
-    
-  }
 }
 </style>

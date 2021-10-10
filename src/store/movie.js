@@ -6,9 +6,6 @@ export default {
             isLoading: false
         }
     },
-    getters:{
-
-    },
     mutations:{
         assignState(state, payload) {
             Object.keys(payload).forEach(key => {
@@ -37,8 +34,6 @@ export default {
             commit('ToggleLoading')
         },
         async detailMovie({ commit }, payload){
-            // loading 때 사용해보자. 여기다 commit('ToggleModal') 작성하면 현재 단계에서는 최초에 
-            // 포스터에 대한 정보가 없어 에러가 발생함
             commit('ToggleLoading')
             const data = await _request(payload)
             commit('ResizingImg', data)

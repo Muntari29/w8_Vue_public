@@ -2,32 +2,70 @@
   <div class="page-nation">
     <ul class="page">
       {{ totalResults }}
-      <li><a href="#">&lt;</a></li>
-      <!-- <li
-        v-for="content in contents"
-        :key="content.imdbID">
-        <a :href="$router.push({
-            name: 'Page',
-            params: {page: }
-        })">2</a>
-      </li> -->
+      <li>
+        <router-link to="/">
+          &lt;
+        </router-link>
+      </li>
       <li>
         <router-link to="/page/1">
           1
         </router-link>
       </li>
-      <li><a href="/page/2">2</a></li>
-      <li><a href="/page/3">3</a></li>
-      <li><a href="#">1</a></li>
-      <li><a href="#">2</a></li>
-      <li><a href="#">3</a></li>
-      <li><a href="#">1</a></li>
-      <li><a href="#">2</a></li>
-      <li><a href="#">3</a></li>
-      <li><a href="#">&gt;</a></li>
+      <li>
+        <router-link to="/page/2">
+          2
+        </router-link>
+      </li>
+      <li>
+        <router-link to="/page/3">
+          3
+        </router-link>
+      </li>
+      <li>
+        <router-link to="/page/4">
+          4
+        </router-link>
+      </li>
+      <li>
+        <router-link to="/page/5">
+          5
+        </router-link>
+      </li>
+      <li>
+        <router-link to="/page/6">
+          6
+        </router-link>
+      </li>
+      <li>
+        <router-link to="/page/7">
+          7
+        </router-link>
+      </li>
+      <li>
+        <router-link to="/page/8">
+          8
+        </router-link>
+      </li>
+      <li>
+        <router-link to="/page/9">
+          9
+        </router-link>
+      </li>
+      <li>
+        <router-link to="/page/10">
+          10
+        </router-link>
+      </li>
+      <li>
+        <router-link to="#">
+          &gt;
+        </router-link>
+      </li>
     </ul>
   </div>
 </template>
+
 <script>
 export default {
     computed:{
